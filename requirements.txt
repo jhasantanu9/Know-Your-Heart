@@ -1,8 +1,5 @@
 Flask
-pickle5
 numpy
 langchain-google-genai
 google-auth
-langchain
-logging
 python-dotenv
