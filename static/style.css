@@ -1,0 +1,292 @@
+
+
+/* Body settings */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Flex container for title and logo */
+.head-container {
+    display: flex;
+    flex-direction: row; /* Ensure title and logo are side by side */
+    justify-content: center; /* Horizontally center */
+    align-items: center; /* Vertically center */
+    margin-bottom: 20px;
+}
+
+/* For larger screens (desktop): */
+@media (min-width: 1024px) {
+    .main-wrapper {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: flex-start;
+        margin: 0 auto;
+        width: 80%;
+    }
+
+    /* Ensure head-container takes up 40% width */
+    .head-container {
+        padding-top: 200px;
+        flex: 1;
+        max-width: 40%;
+        margin-right: 20px; /* Spacing between title/logo and content */
+    }
+
+    /* Ensure content container takes up 60% width */
+    .container {
+        flex: 2;
+        max-width: 60%;
+    }
+}
+
+/* For smaller screens (mobile): */
+@media (max-width: 1024px) {
+    .main-wrapper {
+        display: block;
+    }
+
+    /* Ensure title and logo remain side by side */
+    .head-container {
+        margin-bottom: 20px;
+        flex-direction: row; /* Keep the title and logo side by side for mobile */
+        justify-content: center;
+        align-items: center;
+    }
+
+    .container {
+        max-width: 100%;
+    }
+}
+
+#chat-container {
+    max-width: 600px;
+    height: 450px;
+    overflow-y: auto;
+    margin: 0 auto;
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+}
+
+/* Container for both AI chat and input */
+.chat-AI {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px; /* Set a fixed width */
+    width: 100%; /* Allow it to be responsive */
+    margin: 0 auto; /* Center the container */
+    background-color: #f9f9f9;
+    border-radius: 5px;
+}
+
+/* Container for AI chat messages */
+#ai-chat-container {
+    flex-grow: 1;
+    height: 450px; /* Set a fixed height for the chat area */
+    overflow-y: auto;
+    border: 1px solid #ccc;
+    padding: 10px;
+    background-color: #f9f9f9;
+    width: 100%;
+    box-sizing: border-box; 
+    border-radius: 5px;
+}
+
+/* Messages inside the chat */
+#ai-chat-messages {
+    flex-grow: 1; /* Allow messages to grow and take space */
+    overflow-y: auto;
+    padding: 10px;
+}
+
+/* Input container positioned at the bottom */
+#ai-input-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border-top: 1px solid #ccc;
+    background-color: white;
+    max-width: 600px;
+    width: 100%;
+
+    margin: 0 auto;
+}
+
+#ai-input-container-yes {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border-top: 1px solid #ccc;
+    background-color: white;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+#user-input {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    float: right;
+    clear: both;
+    margin: 10px;
+}
+    
+.bot-message {
+    text-align: left;  
+    background-color: #f1f1f1;
+    float: left;
+    clear: both;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    max-width: 70%;
+}
+
+.ai-message {
+    text-align: left;  
+    background-color: #f1f1f1;
+    float: left;
+    clear: both;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    max-width: 70%;
+}
+
+.user-message {
+    text-align: right;
+    background-color: #007bff;
+    color: white;
+    float: right;
+    clear: both;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    max-width: 70%;
+}
+
+.input-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    float: right;
+    clear: both;
+    margin: 10px;
+}
+
+input, select {
+    text-align: left;
+}
+
+/* Flex layout for buttons with spacing */
+.start-chat-btn {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px; /* Adds space above the button container */
+}
+
+.start-chat-btn button {
+    flex: 1; /* Makes buttons take equal space */
+    min-width: 200px; /* Ensure buttons don't get too small */
+    padding: 10px 20px; /* Adjust padding for consistency */
+}
+
+@media (min-width: 640px) {
+    .start-chat-btn {
+        flex-direction: row; /* Align buttons horizontally on larger screens */
+        justify-content: space-between; /* Space between buttons */
+    }
+}
+
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.chat-container-wrapper {
+    position: relative;
+    max-width: 600px;
+    margin: 0 auto;
+    padding-top: 40px; /* Add space for the button */
+}
+
+#chat-container, #ai-chat-container {
+    width: 100%;
+    height: 450px;
+    overflow-y: auto;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.back-btn {
+    position: fixed; 
+    top: 33px;
+    right: 110px;
+    z-index: 10;
+    background-color: #f3f4f6;
+    color: #4b5563;
+    border: 1px solid #d1d5db;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 14px;
+}
+
+.back-btn:hover {
+    background-color: #e5e7eb;
+    color: #1f2937;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 640px) {
+    .chat-container-wrapper {
+        padding-top: 30px; /* Reduce space for the button on smaller screens */
+    }
+
+    .back-btn {
+        position: fixed; 
+        top: 195px;
+        right: 0px;
+        padding: 6px 12px;
+        font-size: 12px;
+    }
+}
+
+.app-description {
+    background-color: #f0f8ff;
+    padding: 5px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-family: 'Arial', sans-serif;
+    color: #333; 
+    font-size: 1em; 
+    line-height: 1.2; 
+    text-align: left;
+    max-width: 700px; 
+}
+
+.app-description p {
+    margin: 0; /* Remove default margin for a tighter look */
+}
+
+.app-description a {
+    color: #007bff; /* Link color */
+    text-decoration: none; /* Remove underline */
+}
+
+hr {
+    border: 0;
+    clear:both;
+    display:block;
+    width: 96%;               
+    background-color:#000000;
+    height: 1px;
+  }
