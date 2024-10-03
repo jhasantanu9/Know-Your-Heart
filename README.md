@@ -2,7 +2,9 @@
 
 An interactive web application designed to assess heart health and provide personalized insights using AI-driven analysis.
 
-![Know Your Heart Logo](static/logo.jpeg)
+<p align="center">
+  <img src="static/logo.jpeg" alt="Know Your Heart Logo" width="200" height="200">
+</p>
 
 **Visit the application: [Know Your Heart](https://know-your-heart.onrender.com/)**
 
