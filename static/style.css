@@ -309,7 +309,8 @@ hr {
 
     /* Increase height for chat containers on mobile */
     #chat-container,
-    #ai-chat-container {
+    #ai-chat-container,
+    #app-description {
         height: 70vh; /* Use viewport height for responsiveness */
         max-height: 600px; /* Set a maximum height */
     }
