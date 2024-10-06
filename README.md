@@ -93,7 +93,7 @@ These artifacts are crucial for understanding the model's performance, reproduci
 
 ## Usage
 1. Start the application: python app.py
-2. 2. Open a web browser and go to `http://localhost:[your_port]`
+2. Open a web browser and go to `http://localhost:[your_port]`
 3. Follow the on-screen instructions to begin your heart health assessment.
 
 ## AI Integration
